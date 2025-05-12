@@ -20,6 +20,11 @@ function App() {
         <h1 className="text-center mb-4 text-white">Football Team Lineup</h1>
         {mode === 'vs' ? <VS /> : <FootballLineup />}
       </div>
+      <div className="container-fluid py-4 text-center text-white">
+        Made with ❤️ by <a href="https://github.com/ATN20222" className='text-white nav-link'>
+          <b>Anton Abdalla</b>
+        </a>
+      </div>
     </div>
   );
 }
