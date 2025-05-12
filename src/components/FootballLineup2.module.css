@@ -3,7 +3,6 @@
   gap: 20px;
   padding: 20px;
   /* height: 100vh; */
-
 }
 
 .field {
@@ -257,7 +256,4 @@
   .name {
     font-size: 10px;
   }
-  
-  
-}
-
+} 

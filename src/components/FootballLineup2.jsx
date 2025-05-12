@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
-import styles from './FootballLineup.module.css';
+import styles from './FootballLineup2.module.css';
 
 const defaultPlayers = [
     { position: 'GK', x: '50%', y: '85%' },
@@ -37,7 +37,7 @@ const OutlinedFieldIcon = () => (
     </svg>
 );
 
-export default function FootballLineup({isVS = false}) {
+export default function FootballLineup2() {
     const [players, setPlayers] = useState(
         defaultPlayers.map(p => ({ ...p, name: '', image: null }))
     );
@@ -135,10 +135,10 @@ export default function FootballLineup({isVS = false}) {
                     {isDarkTheme ? <FilledFieldIcon /> : <OutlinedFieldIcon />}
                 </button>
             </div>
-            {!isVS && (
-                <div className={styles.sideMenu}>
-                    <h3>Team Lineup</h3>
-                    <div className={styles.playerList}>
+
+            <div className={styles.sideMenu}>
+                <h3>Team Lineup</h3>
+                <div className={styles.playerList}>
                     {players.map((player, i) => (
                         <div key={i} className={styles.menuItem}>
                             <div className={styles.menuPlayer}>
@@ -158,9 +158,8 @@ export default function FootballLineup({isVS = false}) {
                             </Button>
                         </div>
                     ))}
-                    </div>
                 </div>
-            )}
+            </div>
 
             <Modal show={showModal} onHide={() => setShowModal(false)} centered>
                 <Modal.Header closeButton>
@@ -207,4 +206,4 @@ export default function FootballLineup({isVS = false}) {
             </Modal>
         </div>
     );
-}
+} 
