@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-image: url('./components/LineUp.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .App-logo {

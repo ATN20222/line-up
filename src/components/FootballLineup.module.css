@@ -1,0 +1,212 @@
+.layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  /* height: 100vh; */
+
+}
+
+.field {
+  position: relative;
+  flex: 1;
+  height: 90vh;
+  background-image: url('./field_asphalt.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 4px solid #2b7a0b;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px; 
+  /* max-width: 500px; */
+}
+
+.sideMenu {
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sideMenu h3 {
+  color: #2b7a0b;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.playerList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 100px;
+  flex: 1;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.menuItem:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateX(-5px);
+}
+
+.menuPlayer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menuImage, .menuPlaceholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #2b7a0b;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #2b7a0b;
+}
+
+.menuName {
+  font-weight: 500;
+  color: #2b7a0b;
+}
+
+.player {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  text-align: center;
+  width: 80px;
+  height: 80px;
+  transition: all 0.3s ease;
+}
+
+.player:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  z-index: 1;
+}
+
+.image, .placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #2b7a0b;
+  transition: all 0.3s ease;
+}
+
+.player:hover .image,
+.player:hover .placeholder {
+  border-color: #2b7a0b;
+  box-shadow: 0 0 20px rgba(43, 122, 11, 0.6);
+}
+
+.name {
+  margin-top: 8px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.player:hover .name {
+  background-color: rgba(43, 122, 11, 0.8);
+  transform: scale(1.1);
+}
+
+.substitute {
+  position: absolute;
+  bottom: 60px;
+  right: 20px;
+  transform: none;
+  z-index: 2;
+}
+
+.substitute:hover {
+  transform: scale(1.1);
+}
+
+.substitute .image,
+.substitute .placeholder {
+  border-color: #2b7a0b;
+  background-color: rgba(43, 122, 11, 0.1);
+}
+
+.substitute:hover .image,
+.substitute:hover .placeholder {
+  background-color: rgba(43, 122, 11, 0.2);
+}
+  
+@media (max-width: 768px) {
+  .layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .field {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sideMenu {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+}
+
+@media (max-width: 500px) {
+  .player{
+    width: 60px;
+    height: 60px;
+  }
+
+  .image, .placeholder {
+    width: 60px;
+    height: 60px;
+  }
+
+  .name {
+    font-size: 10px;
+  }
+  
+  
+}
+
